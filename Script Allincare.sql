@@ -3,9 +3,8 @@ USE Allincare;
 
 CREATE TABLE Transportadora(
 	idTransportadora INT PRIMARY KEY AUTO_INCREMENT,
-	nomeFantasia VARCHAR(50),
+	nomeFantasia VARCHAR(40),
     razaoSocial VARCHAR(40),
-    cnpjTransportadora VARCHAR(20) UNIQUE,
     nomeRepresentante VARCHAR(40)
 );
 
@@ -28,7 +27,8 @@ CREATE TABLE EnderecoTransp(
     FOREIGN KEY (fkTransportadora) REFERENCES Transportadora(idTransportadora),
     cepEnd VARCHAR(10),
     numEnd INT,
-    complementoEnd VARCHAR(20)
+    complementoEnd VARCHAR(20),
+    cnpjTransportadora VARCHAR(20) UNIQUE
 );
 
 CREATE TABLE ContatoTransp(
@@ -68,7 +68,7 @@ CREATE TABLE Medida(
 	idMedida INT PRIMARY KEY AUTO_INCREMENT,
 	fkSensor INT,
     FOREIGN KEY (fkSensor) REFERENCES Sensor(idSensor),
-    valorTemperatura VARCHAR(40),
+    valorTemperatura DECIMAL,
 	dataHora DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
