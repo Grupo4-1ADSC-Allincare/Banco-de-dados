@@ -3,7 +3,7 @@ USE Allincare;
 
 CREATE TABLE Transportadora(
 	idTransportadora INT PRIMARY KEY AUTO_INCREMENT,
-	nomeFantasia VARCHAR(40),
+	nomeFantasia VARCHAR(50),
     razaoSocial VARCHAR(40),
     cnpjTransportadora VARCHAR(20) UNIQUE,
     nomeRepresentante VARCHAR(40)
