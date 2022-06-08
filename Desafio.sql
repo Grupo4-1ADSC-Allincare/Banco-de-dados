@@ -76,6 +76,8 @@ SELECT * FROM tbExercito;
 SELECT * FROM tbGuerreiros;
 SELECT * FROM tbPoderes;
 SELECT * FROM tbArmas;
+SELECT * FROM tbGuerreirosArmas;
+SELECT * FROM tbGuerreirosPoderes;
 
 INSERT INTO tbReinos
 VALUES (NULL,'NormenGarden','3000000','Humanos'),
@@ -121,3 +123,29 @@ VALUES (NULL,'Adaga Venenosa','Faca','Curto','60','250.50'),
         (NULL,'Aegis','Escudo','Curto','0','320.99'),
         (NULL,'Furador','Lança','Médio','50','400.35'),
         (NULL,'Puxador','Arco e Flecha','Longo','45','210.89');
+        
+INSERT INTO tbGuerreirosArmas
+VALUES ('1','2'),
+		('1','3'),
+		('2','1'),
+        ('3','4'),
+        ('5','5'),
+        ('6','1'),
+        ('7','2'),
+        ('7','3'),
+        ('9','5'),
+        ('10','4'),
+        ('12','2'),
+        ('12','3');
+        
+INSERT INTO tbGuerreirosPoderes
+VALUES ('2','3'),
+        ('2','4'),
+        ('4','1'),
+        ('4','2'),
+        ('4','3'),
+        ('6','3'),
+		('8','1'),
+        ('8','2'),
+        ('11','1'),
+        ('11','3');
